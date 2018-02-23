@@ -12,15 +12,15 @@
 #### Run container using install plugins from file option
 ```
 docker run -d -p 8080:8080 -p 50000:50000 \
--v $(pwd)/plugins.sh:/tmp/plugins.sh jenkins-master --plugins-file /tmp/plugins.txt
+-v $(pwd)/plugins.txt:/tmp/plugins.txt sizgiyaev/jenkins --plugins-file /tmp/plugins.txt
 ```  
 
-#### Run container using install plugins from environment avriables. It's possible to mix options.
+#### Run container using install plugins from environment variables (It's possible to mix options)
 
 ```
 docker run -d -p 8080:8080 -p 50000:50000 -e JENKINS_PLUGIN_a=<plugin_b_id> \
                            -e JENKINS_PLUGIN_b=<plugin_a_id> \
-                           jenkins-master --plugins-from-environment
+                           sizgiyaev/jenkins --plugins-from-environment
 ```
 
 #### Local authentication. The specified user will be the first admin on the system.
@@ -28,7 +28,7 @@ docker run -d -p 8080:8080 -p 50000:50000 -e JENKINS_PLUGIN_a=<plugin_b_id> \
 docker run -d -p 8080:8080 -p 50000:50000 \
 -e 'JENKINS_AUTHENTICATION=local' \
 -e 'JENKINS_LOCAL_USER=<username>' \
--e 'JENKINS_LOCAL_PASS=<password>' jenkins-master
+-e 'JENKINS_LOCAL_PASS=<password>' sizgiyaev/jenkins
 ```
 
 #### LDAP authentication - Unrestricted Mode. All LDAP autheticated users will have admin privileges on the system.
@@ -40,7 +40,7 @@ docker run -it -p 8080:8080 -p 50000:50000 \
 -e 'JENKINS_LDAP_BIND_USER=<Manager user DN>' \
 -e 'JENKINS_LDAP_BIND_PASS=<Manager user password>' \
 -e 'JENKINS_SEARCH_FILTER=samaccountname={0}' \
-jenkins-master
+sizgiyaev/jenkins
 
 ```
 
@@ -54,7 +54,7 @@ docker run -it -p 8080:8080 -p 50000:50000 \
 -e 'JENKINS_LDAP_BIND_PASS=<Manager user password>' \
 -e 'JENKINS_SEARCH_FILTER=samaccountname={0}' \
 -e 'JENKINS_LDAP_ADMINS=user1,group1,user2,group2' \
-jenkins-master
+sizgiyaev/jenkins
 
 ```
 
