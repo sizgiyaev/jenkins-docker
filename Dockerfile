@@ -14,7 +14,7 @@ RUN set -x && \
     apt-get purge wget -y && \
     apt-get clean && \ 
     rm -rf /var/lib/apt/lists/* && \
-    mkdir -p /var/log/jenkins /var/jenkins_home
+    mkdir -p /var/log/jenkins /var/jenkins_home /var/cache/jenkins
     
 COPY entrypoint.sh /usr/bin/entrypoint.sh
 COPY base-plugins.txt /usr/share/jenkins/ref/plugins/base-plugins.txt
