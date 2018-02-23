@@ -1,0 +1,15 @@
+cloudbees-folder
+credentials-binding
+git
+ldap
+timestamper
+matrix-auth
+parameterized-trigger
+workflow-aggregator
+ws-cleanup
+subversion
+role-strategy
+email-ext
+docker-plugin
+docker-commons
+docker-workflow
