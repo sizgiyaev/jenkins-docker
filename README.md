@@ -12,7 +12,7 @@
 #### Run container using install plugins from file option
 ```
 docker run -d -p 8080:8080 -p 50000:50000 \
--v $(pwd)/plugins.txt:/tmp/plugins.txt jenkins-master --plugins-file /tmp/plugins.txt
+-v $(pwd)/plugins.txt:/tmp/plugins.txt sizgiyaev/jenkins --plugins-file /tmp/plugins.txt
 ```  
 
 #### Run container using install plugins from environment variables (It's possible to mix options)
