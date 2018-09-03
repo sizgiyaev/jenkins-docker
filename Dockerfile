@@ -1,4 +1,4 @@
-FROM jenkins/jenkins:2.134
+FROM jenkins/jenkins:2.141
 
 ARG GOSU_VERSION=1.10
 
