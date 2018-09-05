@@ -76,6 +76,6 @@ sizgiyaev/jenkins
 <span style="color:blue">**JENKINS_SEARCH_FILTER**</span> - (Optional) Which LDAP attribute to use to identify username. Default is *`uid={0}`*. For Microsoft AD *`samaccountname={0}`* may be used.  
 <span style="color:blue">**JENKINS_DISPLAY_NAME_ATTRIBUTE**</span> - (Optional) Display Name LDAP attribute. Default is *`displayname`*.  
 <span style="color:blue">**JENKINS_EMAIL_ADDRESS_ATTRIBUTE**</span> - (Optional) Email Address LDAP attribute. Default is *`mail`*.  
-<span style="color:blue">**JENKINS_GROUP_SEARCH**</span> - (Optional) Where to search users in LDAP tree, eg. *`ou=groups`*   
+<span style="color:blue">**JENKINS_GROUP_SEARCH**</span> - (Optional) Where to search groups in LDAP tree, eg. *`ou=groups`*   
 <span style="color:blue">**JENKINS_LDAP_ADMINS**</span> - (Required for restricted mode) - Comma separated list of users and/or groups to assign admin role.  
 
